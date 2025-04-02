@@ -30,7 +30,7 @@ jobs:
       - name: Build static site (Next.js export)
         run: |
           npm run build
-          ls -R out
+          ls -R out  # Debugging: Prüfen, ob out/ existiert
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -38,10 +38,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           force_orphan: true
-
-      - name: Check for output folder
-        run: |
-          echo "Files in workspace:"
-          ls -la
-          echo "Checking .next/static-export"
-          ls -la .next/static-export || echo "Not found"
