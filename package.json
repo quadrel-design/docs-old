@@ -3,9 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export && cp out/index.html out/404.html || echo 'kein index.html gefunden'"
-  },
+  "build": "next build && next export && cp out/index.html out/404.html || echo 'kein index.html gefunden'"
+},
   "dependencies": {
     "next": "13.5.11",
     "nextra": "^4.2.17",
