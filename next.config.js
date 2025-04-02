@@ -3,13 +3,12 @@ const withNextra = require('nextra')({
   themeConfig: './theme.config.tsx',
 })
 
-const repoName = 'docs' // <- ändere das zu deinem GitHub-Repo-Namen
+const repo = 'docs' // GitHub-Repo-Name
 
 module.exports = {
   ...withNextra(),
   output: 'export',
-  basePath: `/${repoName}`,
-  assetPrefix: `/${repoName}/`,
+  basePath: `/${repo}`,
+  assetPrefix: `/${repo}/`,
   trailingSlash: true,
 }
-
