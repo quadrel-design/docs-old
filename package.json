@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+  "dev": "next dev",
   "build": "next build && next export && cp out/index.html out/404.html || echo 'kein index.html gefunden'"
 },
   "dependencies": {
