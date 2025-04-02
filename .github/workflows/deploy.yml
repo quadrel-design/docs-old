@@ -41,5 +41,5 @@ jobs:
 
       - name: Check for output directory
         run: |
-    echo "Checking for 'out' directory..."
-    ls -R out || echo "No 'out' directory found"
+          echo "Checking for 'out' directory..."
+          ls -R out || echo "No 'out' directory found"
