@@ -38,3 +38,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           force_orphan: true
+
+      - name: Check for output directory
+        run: |
+    echo "Checking for 'out' directory..."
+    ls -R out || echo "No 'out' directory found"
