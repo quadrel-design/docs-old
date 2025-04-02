@@ -38,3 +38,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           force_orphan: true
+
+      - name: Check for output folder
+  run: |
+    echo "Files in workspace:"
+    ls -la
+    echo "Checking .next/static/exported"
+    ls -la .next/static-export
