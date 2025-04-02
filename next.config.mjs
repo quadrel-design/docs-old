@@ -6,10 +6,10 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? '/docs/' : '',  // Hier wird der Repository-Name eingebaut
-  basePath: isProd ? '/docs' : '',      // Hier wird der Repository-Name eingebaut
-  output: 'export',  // Aktiviert den statischen Export
-  trailingSlash: true  // Fügt einen Schrägstrich am Ende der URLs hinzu (nützlich für GitHub Pages)
+  assetPrefix: isProd ? '/docs/' : '', // Replace 'docs' with your repository name
+  basePath: isProd ? '/docs' : '', // Same as above
+  output: 'export',  // No need for `next export` here
+  trailingSlash: true, // Add trailing slashes to URLs for compatibility with GitHub Pages
 };
 
 export default nextConfig;
