@@ -1,12 +1,9 @@
-import { withTheme } from 'nextra-theme-docs'
+import theme from 'nextra-theme-docs'
 
 const repo = 'docs'
 
-export default withTheme({
+export default theme({
   themeConfig: './theme.config.tsx',
-  // Optional:
-  // search: { placeholder: 'Suchen...' },
-  // i18n: [{ locale: 'de', text: 'Deutsch' }]
 })({
   output: 'export',
   basePath: `/${repo}`,
