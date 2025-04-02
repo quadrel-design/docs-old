@@ -1,7 +1,14 @@
-# Nextra Docs Template
+// pages/index.tsx oder pages/index.mdx (wenn du MDX verwendest)
+export async function getStaticProps() {
+  return {
+    props: {
+      message: 'Hello, World!'
+    }
+  }
+}
 
-Willkommen! Dies ist ein statischer Test der Startseite ohne Komponenten.
+const HomePage = ({ message }: { message: string }) => {
+  return <h1>{message}</h1>
+}
 
-- [About](about)
-- [Advanced](advanced)
-- [Another](another)
+export default HomePage;
