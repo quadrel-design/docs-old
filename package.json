@@ -2,10 +2,10 @@
   "name": "nextra-docs-template",
   "version": "0.0.1",
   "private": true,
- "scripts": {
-  "dev": "next dev",
-  "build": "next build && next export && cp out/index.html out/404.html || echo 'kein index.html gefunden'"
-},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export && cp out/index.html out/404.html || echo 'kein index.html gefunden'"
+  },
   "dependencies": {
     "next": "13.5.11",
     "nextra": "^4.2.17",
@@ -14,7 +14,6 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0",
     "typescript": "^5.4.0",
     "@types/react": "^18.2.0",
     "@types/node": "^20.11.0"
