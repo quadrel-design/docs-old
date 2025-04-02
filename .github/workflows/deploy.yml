@@ -40,5 +40,3 @@ jobs:
             fi
           done
 
-      - name: Run content script
-        run: node dist/scripts/scripts/content.mjs
