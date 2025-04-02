@@ -30,6 +30,7 @@ jobs:
       - name: Build static site (Next.js export)
         run: |
           npm run build
+          npm run export  # Statischer Export mit next export
           ls -R out  # Debugging: Prüfen, ob out/ existiert
 
       - name: Deploy to GitHub Pages
