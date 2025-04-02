@@ -30,7 +30,6 @@ jobs:
       - name: Build static site
         run: |
           npm run build  # build and export will happen here
-          npm run export  # Explicitly call next export to ensure the /out folder is generated
           ls -R out  # Debugging: Prüfen, ob out/ existiert
 
       - name: Deploy to GitHub Pages
