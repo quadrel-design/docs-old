@@ -1,7 +1,12 @@
-/** @type {import('next').NextConfig} */
-const config = {
-  output: 'export',
-  trailingSlash: true
-}
+const isProd = process.env.NODE_ENV === 'production';
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    unoptimized: true, // Disable default image optimization
+  },
+  assetPrefix: isProd ? '/docs/' : '',
+  basePath: isProd ? '/docs' : '',
+  output: 'export'
+};
 
-export default config
+export default nextConfig;
