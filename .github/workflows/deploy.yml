@@ -27,15 +27,16 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Build static site (Next.js export)
+      - name: Build static site
         run: |
-          npm run build
+          npm run build  # build and export will happen here
+          npm run export  # Explicitly call next export to ensure the /out folder is generated
           ls -R out  # Debugging: Prüfen, ob out/ existiert
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.QUADREL_DESIGN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           force_orphan: true
 
