@@ -43,3 +43,10 @@ jobs:
         run: |
           echo "Checking for 'out' directory..."
           ls -R out || echo "No 'out' directory found"
+
+      - name: Check contents after build
+        run: |
+          echo "Listing all files after build"
+          ls -R .next  # Prüfen, ob alle Build-Dateien vorhanden sind
+          echo "Listing all files in out"
+          ls -R out || echo "No 'out' directory found"
