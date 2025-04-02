@@ -8,8 +8,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,24 +22,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20" # Updated to Node.js 20 as per the GitHub Actions change
+          node-version: "20"
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
-      - name: Post-process scripts
+      - name: Build static site
         run: |
-          for file in dist/scripts/scripts/content.mjs dist/scripts/lib/pageroutes.mjs; do
-            if [ -f "$file" ]; then
-              echo "Processing $file..."
-              sed -i 's|import { Documents } from "@/settings/documents"|import { Documents } from "../settings/documents.mjs"|g' "$file"
-              if [ $? -ne 0 ]; then
-                echo "Error: Failed to update $file"
-                exit 1
-              fi
-              echo "$file updated successfully."
-            else
-              echo "$file not found!"
-            fi
-          done
-
+          npm run build
+          touch out/.nojekyll
+          ls -R out
