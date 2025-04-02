@@ -27,10 +27,9 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Build static site (with next export)
+      - name: Build static site (Next.js export)
         run: |
           npm run build
-          touch out/.nojekyll
           ls -R out
 
       - name: Deploy to GitHub Pages
