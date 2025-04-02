@@ -1,8 +1,9 @@
-name: Build and Deploy Nextra to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 permissions:
   contents: read
