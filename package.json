@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-  "build": "next build && next export && cp out/index.html out/404.html || echo '404 konnte nicht erzeugt werden'",
-  "deploy": "gh-pages -d out"
+  "build": "next build && next export && cp out/index.html out/404.html || echo 'kein index.html gefunden'"
   },
   "dependencies": {
     "next": "13.5.11",
