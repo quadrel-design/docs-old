@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const config = {
   output: 'export',
   trailingSlash: true
 }
 
-module.exports = nextConfig
+export default config
