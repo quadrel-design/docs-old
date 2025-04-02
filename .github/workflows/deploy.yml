@@ -24,12 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Rename .js files to .mjs
-        run: |
-          for file in dist/scripts/**/*.js; do
-            mv "$file" "${file%.js}.mjs"
-          done
-
       - name: Post-process scripts
         run: |
           for file in dist/scripts/scripts/content.mjs dist/scripts/lib/pageroutes.mjs; do
