@@ -1,3 +1,4 @@
+// next.config.mjs
 import theme from 'nextra-theme-docs'
 
 const repo = 'docs'
