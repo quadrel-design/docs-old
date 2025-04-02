@@ -40,8 +40,8 @@ jobs:
           force_orphan: true
 
       - name: Check for output folder
-  run: |
-    echo "Files in workspace:"
-    ls -la
-    echo "Checking .next/static/exported"
-    ls -la .next/static-export
+        run: |
+          echo "Files in workspace:"
+          ls -la
+          echo "Checking .next/static-export"
+          ls -la .next/static-export || echo "Not found"
