@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && cp out/index.html out/404.html",
+    "build": "next build && next export && cp out/docs/index.html out/docs/404.html",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
