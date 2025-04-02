@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Compile TypeScript
-        run: npx tsc --project tsconfig.scripts.json
-
       - name: Rename .js files to .mjs
         run: |
           for file in dist/scripts/**/*.js; do
