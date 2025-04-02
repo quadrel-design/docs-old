@@ -3,23 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "scripts": {
-  "dev": "next dev",
-  "build": "next build && next export && cp out/docs/index.html out/docs/404.html || echo '404-Seite nicht erzeugt – kein index.html gefunden'",
-  "deploy": "gh-pages -d out"
-}
+    "dev": "next dev",
+    "build": "next build && next export && cp out/docs/index.html out/docs/404.html || echo '404-Seite nicht erzeugt – kein index.html gefunden'",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "next": "13.5.11",
     "nextra": "^4.2.17",
     "nextra-theme-docs": "^2.4.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.0.0",
-    "typescript": "^5.4.0",
-    "@types/react": "^18.2.0",
-    "@types/node": "^20.11.0"
-  }
-}
+    "react-dom": "
