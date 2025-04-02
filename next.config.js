@@ -3,7 +3,7 @@ const withNextra = require('nextra')({
   themeConfig: './theme.config.tsx',
 })
 
-const repo = 'docs' // GitHub-Repo-Name
+const repo = 'docs'
 
 module.exports = {
   ...withNextra(),
