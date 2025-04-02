@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages (via gh-pages)
+name: Deploy to GitHub Pages (temporär via gh-pages)
 
 on:
   push:
@@ -6,14 +6,14 @@ on:
       - main
 
 permissions:
-  contents: write  # notwendig für Push auf gh-pages
+  contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -29,9 +29,9 @@ jobs:
           npm run build
           touch out/.nojekyll
 
-      - name: Deploy to GitHub Pages branch
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          force_orphan: true  # ersetzt Branch komplett
+          force_orphan: true
