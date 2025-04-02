@@ -1,9 +1,8 @@
-// next.config.mjs
-import theme from 'nextra-theme-docs'
+const theme = require('nextra-theme-docs')
 
 const repo = 'docs'
 
-export default theme({
+module.exports = theme({
   themeConfig: './theme.config.tsx',
 })({
   output: 'export',
